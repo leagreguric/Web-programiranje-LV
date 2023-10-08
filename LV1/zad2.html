@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1><a href="Untitled-1.html">OBRAZAC</a></h1>
+    <form>
+        <label for="korisnicko_ime">Korisničko ime:</label>
+
+
+        <br><input type="text" id="korisnicko_ime" name="korisnicko_ime" size="15"
+            placeholder="Unesite korisničko ime"><br>
+
+        <label for="lozinka">Lozinka:</label>
+        <br><input type="password" id="lozinka" name="lozinka" size="15" placeholder="Unesite lozinku"><br>
+
+        <label for="ocjena">Ocjena:</label>
+        <select id="ocjena" name="ocjena">
+            <option value="nedovoljan">Nedovoljan</option>
+            <option value="dovoljan">Dovoljan</option>
+            <option value="dobar">Dobar</option>
+            <option value="vrlo_dobar">Vrlo dobar</option>
+            <option value="izvrstan">Izvrstan</option>
+        </select>
+
+        <label for="komentar">Komentar:</label>
+        <textarea id="komentar" name="komentar" rows="7" cols="40" placeholder="Unesite komentar"></textarea>
+
+        <p>Ocjenite usmeni nastup:</p>
+        <input type="radio" id="komunikativan" name="ocjena_usmeni" value="komunikativan">
+        <label for="komunikativan">Komunikativan</label>
+
+        <input type="radio" id="samostalan" name="ocjena_usmeni" value="samostalan">
+        <label for="samostalan">Samostalan</label>
+
+        <input type="radio" id="radisan" name="ocjena_usmeni" value="radisan">
+        <label for="radisan">Radišan</label>
+
+        <input type="radio" id="nista_od_navedenog" name="ocjena_usmeni" value="nista_od_navedenog" checked>
+        <label for="nista_od_navedenog">Ništa od navedenog</label>
+
+        <table>
+            <tr>
+                <td><input type="submit" value="Pošalji"></td>
+            </tr>
+            <tr>
+                <td><input type="reset" value="Poništi"></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>
