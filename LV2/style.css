@@ -1,0 +1,33 @@
+p {
+    text-align: right;
+    margin-right: 3em;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-style: italic;
+    color: blue;
+}
+
+
+.odlomak1 {
+    text-align: center;
+    color: red;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 110%;
+}
+
+#odlomak2 {
+    text-align: justify;
+    font-family:'Segoe UI', Verdana, sans-serif;
+}
+
+#link1 {
+    color:gray;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+#link1:hover {
+    color:yellow;  
+}

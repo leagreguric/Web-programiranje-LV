@@ -1,0 +1,35 @@
+#lista {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#lista li {
+    display: inline;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin: 8px;
+    border: #345678 2px solid;
+}
+
+#lista li a{
+    border: rgb(218, 85, 180) 2px solid;
+    color: rgb(218, 85, 180);
+    background-color: #16cae1;
+    text-decoration: none;
+
+}
+
+#lista li a:hover{
+    background-color: rgb(143, 221, 232);
+    border: #db84d2 2px dashed;
+}
+
+#lista li a:active{
+    color: red;
+    background-color: green;
+    border: red 2px dotted;
+}
