@@ -1,25 +1,82 @@
 <?php
-$filename = "tekst.txt";
-$file = fopen($filename, "r+");
-
-$str_tekst = fread($file, filesize($filename));
-fclose($file);
-
-echo "<h1>$str_tekst</h1>";
-
-$izrezani_tekst = explode(" ", $str_tekst);
-
-echo "<br/>";
-$file = fopen($filename, "a");
-foreach ($izrezani_tekst as $rijec) {
-    fwrite($file, $rijec . "\n");
+$student = array("Lea","Gregurić","456456", "1145", "3.");
+foreach ($student as $value){
+	echo "$value <br/>";
 }
-fclose($file);
 
+$automobil = array( 
+   "hyundai" => array (
+   "ime" => "hyundai",
+      "tip automobila" => "Limuzina",
+      "kubikaža" => "1.6",	
+      "boja" => "bijela",
+      "godina proizvodnje" => "2016",
+      "motor" => "1.6 crdi"
+   ),
+   
+   "Citroen" => array (
+   "ime" => "Citroen",
+      "tip automobila" => "coupe",
+      "kubikaža" => "1.4",	
+      "boja" => "crvena",
+      "godina proizvodnje" => "2020",
+      "motor" => "1.4 tsi"
+   )
+);
 
 echo "<br/>";
-$prvoPojavljivanje = strpos($str_tekst, 'k');
-$ukupnoPojavljivanja = substr_count($str_tekst, 'k');
-echo "Prvi put se slovo 'k' pojavljuje na $prvoPojavljivanje mjestu i ukupno se pojavljuje $ukupnoPojavljivanja puta.";
+         
+
+foreach ($automobil['hyundai'] as $key => $value) {
+   echo "$key: $value <br/>";
+}
+echo "<br/>";
+
+echo "ime: " . $automobil['Citroen']['ime'] . "<br/>";
+echo "tip automobila: " . $automobil['Citroen']['tip automobila'] . "<br/>";
+echo "kubikaža: " . $automobil['Citroen']['kubikaža'] . "<br/>";
+echo "boja: " . $automobil['Citroen']['boja'] . "<br/>";
+echo "godina proizvodnje: " . $automobil['Citroen']['godina proizvodnje'] . "<br/>";
+echo "motor: " . $automobil['Citroen']['motor'] . "<br/>";
+
+function kvadrat($num) {
+   return $num * $num;
+}
+
+$num = 9;
+$result = kvadrat($num);
+echo "<br/>";
+echo "Kvadrat broja $num je: $result";
+
+class Kupac {
+   private $firstName;
+   private $lastName;
+
+   public function __construct($firstName, $lastName) {
+       $this->firstName = $firstName;
+       $this->lastName = $lastName;
+   }
+
+   public function setFirstName($firstName) {
+       $this->firstName = $firstName;
+   }
+
+   public function setLastName($lastName) {
+       $this->lastName = $lastName;
+   }
+
+   public function printKupacInfo() {
+       echo "Kupac je: $this->firstName $this->lastName";
+   }
+}
+echo "<br/>";
+echo "<br/>";
+
+$kupac = new Kupac("Lea", "Greguric");
+
+$kupac->setFirstName("Perica");
+$kupac->setLastName("Peričić");
+
+$kupac->printKupacInfo();
 
 ?>
