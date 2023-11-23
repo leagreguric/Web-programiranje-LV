@@ -3,8 +3,10 @@ session_start();
 error_reporting(0);
 include('spoj.php');
 if (strlen($_SESSION['id'] == 0)) {
-    header('location:odjava.php');
+    header('location:prijava.php');
 }
+
+
 
 ?>
 
@@ -19,8 +21,19 @@ if (strlen($_SESSION['id'] == 0)) {
 </head>
 
 <body>
-    <a href="dodaj_proizvod.php">Dodaj novi proizvod</a>
+
+    
     <a href="odjava.php">Odjavi se</a>
+    
+    <?php
+    $user_id = $_SESSION['id'];
+    $query = mysqli_query($spoj, 'SELECT uloga FROM korisnici WHERE id = "'.$user_id.'"');
+    $row = mysqli_fetch_array($query);
+    if($row['uloga'] == 'admin')
+    echo '<a href="dodaj_proizvod.php">Dodaj novi proizvod</a>';
+
+    ?>
+
     <div>
         <h2>Ispis proizvoda</h2>
 
